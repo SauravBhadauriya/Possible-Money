@@ -13,7 +13,7 @@ const Trust = () => {
                 </div>
                 <div class="trust-item">
                     <div class="trust-icon">💰</div>
-                    <div class="trust-number">$2B+</div>
+                    <div class="trust-number">₹2B+</div>
                     <div class="trust-label">Loans Funded</div>
                 </div>
                 <div class="trust-item">

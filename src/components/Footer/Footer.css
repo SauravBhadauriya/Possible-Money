@@ -20,8 +20,9 @@
 }
 
 .footer-logo .logo-icon {
-    /* background: #55248e; */
+    background: black;
     color:#00274D ;
+    margin: 20px 22px;
 }
 .logo-text{
     color:#2E8B57

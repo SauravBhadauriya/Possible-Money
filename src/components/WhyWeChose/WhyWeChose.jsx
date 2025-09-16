@@ -7,7 +7,7 @@ const WhyWeChose = () =>
 <section id="about" class="benefits">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose MoneyFlow?</h2>
+                <h2>Why Choose PossibleMoney?</h2>
                 <p>We're committed to making your financial goals a reality</p>
             </div>
 

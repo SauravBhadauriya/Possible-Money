@@ -46,22 +46,22 @@ const  Footer = () => {
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="contact-icon">📞</span>
-                            <span>1-800-MONEY-01</span>
+                            <span>+91-9990908775</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">✉️</span>
-                            <span>loans@moneyflow.com</span>
+                            <span>loans@possiblemoney.com</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
-                            <span>123 Financial Street New York, NY 10001</span>
+                            <span>124A/1, LGF, Shaheed Jeet Singh Marg, Block A, Katwaria Sarai, New Delhi, Delhi 110016</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 MoneyFlow. All rights reserved. Licensed Lender NMLS #123456</p>
+                <p>&copy; 2025 PossibleMoney. All rights reserved. Licensed Lender NMLS #123456</p>
             </div>
         </div>
     </footer>

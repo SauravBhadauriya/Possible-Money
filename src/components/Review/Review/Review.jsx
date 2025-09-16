@@ -13,7 +13,7 @@ const Review = () => {
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"MoneyFlow made buying my first home possible. The process was smooth, rates were competitive, and the team was incredibly helpful throughout."</p>
+                    <p>"PossibleMoney made buying my first home possible. The process was smooth, rates were competitive, and the team was incredibly helpful throughout."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">SJ</div>
                         <div class="author-info">
