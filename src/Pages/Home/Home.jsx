@@ -10,6 +10,7 @@ import WhyWeChose from '../../components/WhyWeChose/WhyWeChose'
 import Review from '../../components/Review/Review/Review'
 import CTA from '../../components/CTA/CTA'
 import LogoCarousel from '../../components/Partners/LogoCarousel'
+import EMICalculator from '../../components/Calculaor/calculator'
 
 
 export const Home  = () => {
@@ -18,6 +19,7 @@ export const Home  = () => {
       <Navbar/>
       <HeroBanner/>
       <LogoCarousel/>
+      <EMICalculator/>
       <Trust/>
       <Cards/>
       <WhyWeChose/>

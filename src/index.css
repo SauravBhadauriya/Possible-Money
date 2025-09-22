@@ -1,6 +1,10 @@
 @media only screen and (max-width: 600px)
 {
-
+.process-grid {
+    display: block
+;
+   
+}
 }
 .container, header{
   max-width: 1200px;
