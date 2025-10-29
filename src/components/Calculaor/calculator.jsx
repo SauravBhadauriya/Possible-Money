@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./calculator.css";
-import ApplyForm from "../Form/ApplyLoanForm";
-
-
-
-
+import ShowApplyFormBtn from "../Form/ApplyFormBtn";
 
 function calculateEMI(P, R, N) {
   // P = principal, R = annual interest rate (%), N = tenure (months)
@@ -14,11 +10,8 @@ function calculateEMI(P, R, N) {
     : 0;
 }
 
-
 const EMICalculator = ({ setOpen }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-// Default values from your reference image
+  // Default values from your reference image
   const [amount, setAmount] = useState(1160000);
   const [rate, setRate] = useState(15);
   const [months, setMonths] = useState(60);
@@ -74,8 +67,10 @@ const EMICalculator = ({ setOpen }) => {
           <div className="flex items-center justify-center ">
             <div className="emi-result-box md:translate-x-15 bg-white !p-6 grid gap-4 text-center border border-gray-200 rounded-xl ">
               <div className="emi-result-label">Monthly EMI</div>
-              <div className="text-blue-600 text-4xl font-semibold whitespace-nowrap   ">₹ {emi.toLocaleString()}</div>
-              <ApplyForm/>
+              <div className="text-blue-600 text-4xl font-semibold whitespace-nowrap   ">
+                ₹ {emi.toLocaleString()}
+              </div>
+              <ShowApplyFormBtn setOpen={setOpen} />
             </div>
           </div>
         </div>

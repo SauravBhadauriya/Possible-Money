@@ -27,10 +27,8 @@ const ContactExpertPopup = ({ onClose }) => (
   </div>
 );
 
-
 const CTA = ({ setOpen }) => {
   const [showContact, setShowContact] = useState(false);
-
 
   return (
     <section className="cta">
@@ -38,15 +36,22 @@ const CTA = ({ setOpen }) => {
         <div className="cta-content">
           <h2>Ready to Get Started?</h2>
           <p>
-            Join thousands of satisfied customers who chose PossibleMoney
-            for their financial needs.
+            Join thousands of satisfied customers who chose PossibleMoney for
+            their financial needs.
           </p>
 
           <div className="cta-buttons">
             {/* ✅ This button will trigger the ApplyFormUi from Home.jsx */}
-            
-            <button className="btn btn-secondary" onClick={() => setOpen(true)}>Apply Now - Free Quote</button>
-      <button className="btn btn-outline-white" onClick={() => setShowContact(true)}>Talk to an Expert</button>
+
+            <button className="btn btn-secondary" onClick={() => setOpen(true)}>
+              Apply Now - Free Quote
+            </button>
+            <button
+              className="btn btn-outline-white"
+              onClick={() => setShowContact(true)}
+            >
+              Talk to an Expert
+            </button>
           </div>
         </div>
       </div>
