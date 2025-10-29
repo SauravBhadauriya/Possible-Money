@@ -1,44 +1,49 @@
-import React from "react"
-import "./Apply.css"
+import React from "react";
+import "./Apply.css";
+
+const applyData = [
+ 
+  {
+    heading: "Apply Online",
+    content: "Complete our simple application in just 5 minutes. Money is your",
+  },
+  {
+    heading: "Share Documents",
+    content:
+      "Complete our simple application in just 5 minutes. paperwork required.",
+  },
+  {
+    heading: "Get Approved",
+    content:
+      "Receive your loan decision within 24 hours. Most applications are approved instantly.",
+  },
+  {
+    heading: "Receive Funds",
+    content:
+      "Funds are deposited directly into your account as soon as the next business day.",
+  },
+];
 
 const Apply = () => {
-    return (
-
-    
-<section id="process" class="process">
-        <div class="container flex">
-            <div class="section-header">
-                <h2>Simple 4-Step Process</h2>
-                <p>Getting your loan has never been easier</p>
-            </div>
-
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Apply Online</h3>
-                    <p>Complete our simple application in just 5 minutes. Money is your</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Share Documents</h3>
-                    <p>Complete our simple application in just 5 minutes. paperwork required.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Get Approved</h3>
-                    <p>Receive your loan decision within 24 hours. Most applications are approved instantly.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Receive Funds</h3>
-                    <p>Funds are deposited directly into your account as soon as the next business day.</p>
-                </div>
-            </div>
+  return (
+    <section id="process" class="process">
+      <div class="container flex">
+        <div class="section-header">
+          <h2>Simple 4-Step Process</h2>
+          <p>Getting your loan has never been easier</p>
         </div>
-    </section>
 
-    );};
-    export default Apply
+        <div class="process-grid">
+          {applyData.map((data, index) => (
+            <div class="process-step" key={index}>
+              <div class="step-number">{index+1}</div>
+              <h3>{data.heading}</h3>
+              <p>{data.content}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+export default Apply;

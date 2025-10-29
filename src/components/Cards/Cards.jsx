@@ -89,7 +89,7 @@ const Cards = () => {
         <div className="services-grid">
           {Object.entries(loanDetails).map(([key, loan]) => (
             <div key={key} className="service-card">
-              <div className={`service-icon ₹{key}`}>
+              <div className={`service-icon ${key}`}>
                 {/* Optionally use emojis or icons */}
                 {key === "personal" && "💸"}
                 {key === "home" && "🏠"}
@@ -98,7 +98,7 @@ const Cards = () => {
                 {key === "business" && "🏢"}
               </div>
               <h3>{loan.title}</h3>
-              <p>{loanFeaturesSummary(key)}</p>
+              {/* <p>{loanFeaturesSummary(key)}</p> */}
               <ul className="service-features">
                 {loan.features.slice(0, 3).map((feature, i) => (
                   <li key={i}>✓ {feature}</li>
@@ -170,7 +170,7 @@ const Cards = () => {
 function loanFeaturesSummary(key) {
   const loan = loanDetails[key];
   if (!loan) return "";
-  return `✓ ₹{loan.features[0]}, ✓ ₹{loan.features[1]}, ✓ ₹{loan.features[2]}`;
+  return `✓ ${loan.features[0]}, ✓ ${loan.features[1]}, ✓ ${loan.features[2]}`;
 }
 
 export default Cards;

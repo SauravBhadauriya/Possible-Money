@@ -1,59 +1,101 @@
 .benefits {
-    padding: 100px 0;
-    background: #f8fafc;
+  width: 100vw;
+  padding: 60px 16px;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
-.benefit-item {
-    text-align: center;
-}
-
-.benefit-icon {
-    width: 80px;
-    height: 80px;
-    background: #dbeafe;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    margin: 0 auto 24px;
-}
-
-.benefit-item h3 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1f2937;
-    margin-bottom: 16px;
-}
-
-.benefit-item p {
-    color: #6b7280;
-    line-height: 1.6;
-}
-
 
 .section-header {
-    text-align: center;
-    margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .section-header h2 {
-    font-size: 40px;
-    font-weight: 800;
-    color: #1f2937;
-    margin-bottom: 16px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
 }
 
 .section-header p {
-    font-size: 20px;
-    color: #6b7280;
-    max-width: 600px;
-    margin: 0 auto;
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.5;
 }
 
+/* Benefits Grid: 3 columns on large screens, 2 on tablets, 1 on mobile */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+}
+
+.benefit-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #2563eb;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* Responsive for tablets and smaller devices */
+@media (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .benefit-icon {
+    font-size: 40px;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .benefit-icon {
+    font-size: 33px;
+  }
+}

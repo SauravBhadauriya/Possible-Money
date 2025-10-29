@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 @media only screen and (max-width: 600px)
 {
 .process-grid {
@@ -5,11 +8,12 @@
 ;
    
 }
+
 }
-.container, header{
+/* .container, header{
   max-width: 1200px;
   margin: 0 auto;
-}
+} */
 /* Reset */
 * {
   margin: 0;
@@ -30,3 +34,33 @@ a {
   color: inherit;
 }
 
+
+.btn{
+  @apply px-4 py-2  rounded-lg font-semibold;
+
+}
+
+
+.btnPrimary{
+  @apply text-white bg-blue-600 hover:bg-blue-700 
+}
+
+.btnDanger{
+  @apply text-white bg-red-600 hover:bg-red-700
+}
+
+.btnSm{
+@apply text-sm 
+}
+
+.btnLg{
+@apply text-lg
+}
+
+.input-feaild{
+  @apply m-4
+}
+
+.input-data{
+@apply  w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-[44px]
+}

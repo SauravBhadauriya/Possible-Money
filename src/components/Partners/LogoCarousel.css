@@ -1,39 +1,85 @@
 .carousel-container {
-  max-width: 100%;
-  overflow: hidden;
-  background: #fff;
-  padding: 16px 0;
+  width: 100vw;
+  padding: 28px 0 12px 0;
+  background: #f8fafc;
+  text-align: center;
   box-sizing: border-box;
+}
 
+.carousel-container h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #223042;
+  margin-bottom: 18px;
+  line-height: 1.2;
 }
 
 .carousel-track {
   display: flex;
-  gap: 40px;
-  width: max-content; /* Let the track width wrap content naturally */
-  animation: scroll 18s linear infinite;
+  align-items: center;
+  gap: 42px;
+  width: max-content;
+  max-width: 95vw;
+  animation: scroll-logos 24s linear infinite;
+  will-change: transform;
+  padding-left: 2vw;
+  overflow: hidden;
 }
 
 .carousel-logo {
-  height: 38px;
+  height: 48px;
   width: auto;
-  flex-shrink: 0; /* Prevent shrinking for consistent width */
+  object-fit: contain;
+  filter: grayscale(25%);
+  opacity: 0.88;
+  transition: filter 0.3s, opacity 0.3s;
+}
+.carousel-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
-/* The keyframe animation shifts the track left by 50% of its width */
-@keyframes scroll {
+/* Animation for seamless scrolling */
+@keyframes scroll-logos {
   from {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-50%);
   }
 }
 
-.carousel-container h3 {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 800;
-  color: #1f2937;
-  margin-bottom: 16px;
+/* Tablets */
+@media (max-width: 1024px) {
+  .carousel-container h3 {
+    font-size: 1.13rem;
+    margin-bottom: 12px;
+  }
+  .carousel-logo {
+    height: 35px;
+  }
+  .carousel-track {
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 16px 0 8px 0;
+  }
+  .carousel-container h3 {
+    font-size: 1rem;
+    line-height: 1.23;
+    margin-bottom: 7px;
+  }
+  .carousel-logo {
+    height: 28px;
+    max-width: 52vw;
+  }
+  .carousel-track {
+    gap: 18px;
+    padding-left: 4vw;
+    animation-duration: 18s;
+  }
 }

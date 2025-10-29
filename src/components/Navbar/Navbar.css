@@ -1,74 +1,134 @@
+/* Main structure */
 .header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  width: 100vw;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  max-width: 100%;
+  top: 0; left: 0;
+  z-index: 20;
 }
 
-.nav {
+.nav.container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-
-.header img {
-  width: 150px;
-  margin-left: 10px;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 60px;
 }
 
 .nav-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 70px;
-}
-
-.nav {
-  display: flex;
-  gap: 32px;
-  height: 60px;
+  gap: 2rem;
 }
 
 .nav-link {
-  text-decoration: none;
-  color: #4b5563;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #1e40af;
-}
-
-/* Buttons */
-
-.btn {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  color: #222;
   font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  margin-right: 24px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #1565c0;
 }
 
 .btn-primary {
-  background: #1e40af;
-  color: white;
+  background: #1565c0;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 8px 21px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(21, 101, 192, 0.12);
+  transition: background 0.2s;
 }
 
 .btn-primary:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
+  background: #06468e;
 }
 
-.btn .btn {
-  margin: 10px;
+/* Hamburger Menu Icon */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  z-index: 50;
+}
+
+.mobile-menu.closed {
+  transform: translateX(-100vw);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  margin-bottom: 22px;
+  font-size: 20px;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .nav.container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    z-index: 80;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu a,
+  .mobile-menu button {
+    margin-right: 0;
+    width: 80vw;
+    text-align: center;
+  }
+  .btn-primary {
+    width: 80vw;
+  }
 }

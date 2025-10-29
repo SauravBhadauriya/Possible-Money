@@ -1,87 +1,72 @@
 .hero {
-  background: linear-gradient(rgba(0, 39, 77, 0.8), rgba(0, 39, 77, 0.8)),
-    url(../../../src/assets/loans.webp) center/cover;
-  color: #fff;
+  width: 100vw;
+  min-height: 50vh;
   display: flex;
-  justify-content: space-evenly;
-  padding: 100px 20px;
+  align-items: center;
+    background: linear-gradient(90deg, #eaf4fc 0%, #7166ad 100%);
+  padding-top: 70px;
+  box-sizing: border-box;
 }
 
-.flex-row{
-    display: flex
-;
-    justify-content: space-evenly;
-    gap: 20px;
-    align-items: center;
-}
-
-
-.hero h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.hero button {
-  background: blue;
-  border: none;
-  color: #fff;
-  padding: 12px 28px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-      margin: 10px 65px;
-}
-
-.hero button:hover {
-  background: #009624;
-}
-
-.calculate {
+.container.flex-row {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px 10px 10px 10px;
-  margin: 10px 10px 10px 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.calculate label {
-  font-size: 15px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-decoration: none;
+.hero1 {
+  flex: 1;
+  padding: 32px 24px 32px 0;
+  text-align: left;
 }
 
-input {
-  width: 290px;
-  height: 30px;
-  border-radius: 5px;
+.hero1 h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #17314a;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
 }
 
-.calculator-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-
-  width: 328px;
-  text-align: center;
+.hero1 p {
+  font-size: 1.2rem;
+  color: #243b5d;
+  max-width: 40rem;
+  margin-bottom: 0;
+  font-weight: 400;
 }
 
-.result {
-  padding: 10px;
-
-  width: 200px;
-  margin-left: 43px;
+@media (max-width: 1024px) {
+  .container.flex-row {
+    padding: 32px 10px;
+    max-width: 95vw;
+  }
+  .hero1 {
+    padding: 18px 12px;
+  }
 }
 
-.result-amt {
-  font-size: 26px;
-  color: white;
-  font-weight: bold;
+@media (max-width: 768px) {
+  .container.flex-row {
+    flex-direction: column;
+    padding: 22px 0px;
+    align-items: flex-start;
+  }
+  .hero1 {
+    padding: 0 14px;
+    text-align: left;
+  }
+  .hero1 h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+  .hero1 p {
+    font-size: 1rem;
+  }
 }
